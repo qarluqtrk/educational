@@ -1,14 +1,56 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hi, My name is Shokhrukh!</h1>
+{% extends 'app/main/base.html' %}
+{% load static %}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% block content %}
+
+
+    <!-- header section start here -->
+    <!-- header section ending here -->
+
+
+    <!-- banner section start here -->
+    {% include 'app/main/banner/banner1.html' %}
+    <!-- banner section ending here -->
+
+
+    <!-- sponsor section start here -->
+    {% include 'app/main/other/sponsor.html' %}
+    <!-- sponsor section ending here -->
+
+
+    <!-- category section start here -->
+    {% include 'app/main/other/category.html' %}
+    <!-- category section start here -->
+
+
+    <!-- course section start here -->
+    {% include 'app/main/other/featuredcourses.html' %}
+    <!-- course section ending here -->
+
+
+    <!-- abouts section start here -->
+     {% include 'app/main/other/about.html' %}
+    <!-- about section ending here -->
+
+
+    <!-- Instructors Section Start Here -->
+    {% include 'app/main/other/instructor.html' %}
+    <!-- Instructors Section Ending Here -->
+
+
+    <!-- student feedbak section start here -->
+    {% include 'app/main/other/feed.html' %}
+    <!-- student feedbak section ending here -->
+
+
+    <!-- blog section start here -->
+    {% include 'app/main/other/blog.html' %}
+    <!-- blog section ending here -->
+
+
+    <!-- Achievement section start here -->
+    {% include 'app/main/other/achievements.html' %}
+    <!-- Achievement section ending here -->
+
+
+{% endblock content %}
