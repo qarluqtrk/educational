@@ -1,0 +1,24 @@
+{% load static %}
+<div class="col">
+                        <div class="post-item">
+                            <div class="post-inner">
+                                <div class="post-thumb">
+                                    <a href="{% url 'blog-single' blog.id %}"><img src="{{ blog.image.url }}" alt="blog thumb"></a>
+                                </div>
+                                <div class="post-content">
+                                    <a href="{% url 'blog-single' blog.id %}"><h4>{{ blog.title }}</h4></a>
+                                    <div class="meta-post">
+                                        <ul class="lab-ul">
+                                            <li><i class="icofont-calendar"></i>{{ blog.data }}</li>
+                                        </ul>
+                                    </div>
+                                    <p>{{ blog.text|slice:"100" }}...</p>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="pf-left">
+                                        <a href="{% url 'blog-single' blog.id %}" class="lab-btn-text">Read more <i class="icofont-external-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

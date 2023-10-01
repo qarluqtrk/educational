@@ -3,8 +3,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.exceptions import ValidationError
 from django.db.transaction import atomic
+from django.forms import HiddenInput
 
-from app.models import User
+from app.models import User, Blog, BlogComment
 
 
 class RegisterForm(forms.Form):
@@ -53,3 +54,12 @@ class LoginForm(AuthenticationForm):
                 self.confirm_login_allowed(self.user_cache)
 
         return self.cleaned_data
+
+
+class BlogCommentForm(forms.ModelForm):
+    user = forms.IntegerField(widget=HiddenInput(), required=False)
+    blog = forms.IntegerField(widget=HiddenInput(), required=False)
+
+    class Meta:
+        model = BlogComment
+        exclude = ()

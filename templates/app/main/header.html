@@ -5,10 +5,10 @@
                 <div class="header-top-area">
                     <ul class="lab-ul left">
                         <li>
-                            <i class="icofont-ui-call"></i> <span>+800-123-4567 6587</span>
+                            <i class="icofont-ui-call"></i> <span>(+998) 97 316 0228</span>
                         </li>
                         <li>
-                            <i class="icofont-location-pin"></i> Beverley, New York 224 USA
+                            <i class="icofont-location-pin"></i> Qarshi, Paxtazor (mo'ljal: Asaka Bank)
                         </li>
                     </ul>
                     <ul class="lab-ul social-icons d-flex align-items-center">
@@ -26,42 +26,18 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="index.html"><img src="{% static 'assets/images/logo/01.png' %}" alt="logo"></a>
+                        <a href="{% url 'index' %}"><h4>Asliddin Edu</h4></a>
                     </div>
                     <div class="menu-area">
                         <div class="menu">
                             <ul class="lab-ul">
-                                <li>
-                                    <a href="{% url "index" %}">Home</a>
-
-                                </li>
 
                                 <li>
-                                    <a href="{% url 'courses' %}">Courses</a>
+                                    <a href="{% url 'courses' %}">Kurslar</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'blog' %}">Blog</a>
+                                    <a href="{% url 'blog' %}">Yangiliklar</a>
                                 </li>
-                                <li>
-                                    <a href="#0">Pages</a>
-                                    <ul class="lab-ul">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="instructor.html">Instructor</a></li>
-                                        <li>
-                                            <a href="#0">Shop Pages</a>
-                                            <ul class="lab-ul">
-                                                <li><a href="shop.html">Shop Page</a></li>
-                                                <li><a href="shop-single.html">Shop Details Page</a></li>
-                                                <li><a href="cart-page.html">Shop Cart Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="search-page.html">Search Page</a></li>
-                                        <li><a href="search-none.html">Search None</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                         {% if user.is_authenticated %}

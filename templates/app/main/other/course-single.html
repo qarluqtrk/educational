@@ -1,0 +1,30 @@
+{% load static %}
+<div class="col">
+                        <div class="course-item">
+                            <div class="course-inner">
+                                <div class="course-thumb">
+                                    <img src="{{ course.image.url }}" alt="course" style="width: 400px; height: 400px; object-fit: cover">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-price">${{ course.price }}</div>
+                                    <div class="course-category">
+                                        <div class="course-cate">
+                                            <a href="/courses/?query={{ course.category.id }}">{{ course.category }}</a>
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'course' course.id %}"><h5>{{ course.title }}</h5></a>
+                                    <div class="course-details">
+                                        <div class="couse-count"><i class="icofont-video-alt"></i> {{ course.duration }} oy</div>
+                                    </div>
+                                    <div class="course-footer">
+                                        <div class="course-author">
+                                            <a href="{% url 'team-single' course.instructor.id %}" class="ca-name">{{ course.instructor.name }}</a>
+                                        </div>
+                                        <div class="course-btn">
+                                            <a href="{% url 'course' course.id %}" class="lab-btn-text">Read More <i class="icofont-external-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

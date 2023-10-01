@@ -1,47 +1,21 @@
 {% load static %}
-<section class="banner-section style-1">
+    <!-- Banner Section Start Here -->
+    <div class="banner-section style-4">
         <div class="container">
-            <div class="section-wrapper">
-                <div class="row align-items-center">
-                    <div class="col-xxl-5 col-xl-6 col-lg-10">
-                        <div class="banner-content">
-                            <h6 class="subtitle text-uppercase fw-medium">Online education</h6>
-                            <h2 class="title"><span class="d-lg-block">Learn The</span> Skills You Need <span class="d-lg-block">To Succeed</span></h2>
-                            <p class="desc">Free online courses from the world’s Leading experts. join 18+ million Learners today.</p>
-                            <form action="https://demos.codexcoder.com/">
-                                <div class="banner-icon">
-                                    <i class="icofont-search"></i>
-                                </div>
-                                <input type="text" placeholder="Keywords of your course">
-                                <button type="submit">Search Course</button>
-                            </form>
-                            <div class="banner-catagory d-flex flex-wrap">
-                                <p>Most Popular : </p>
-                                <ul class="lab-ul d-flex flex-wrap">
-                                    <li><a href="#">Figma</a></li>
-                                    <li><a href="#">Adobe XD</a></li>
-                                    <li><a href="#">illustration</a></li>
-                                    <li><a href="#">Photoshop</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-7 col-xl-6">
-                        <div class="banner-thumb">
-                            <img src="{% static 'assets/images/banner/01.png' %}" alt="img">
-                        </div>
-                    </div>
-                </div>
+            <div class="banner-content">
+                <h2><span>50+</span> Kurslar orasidan izlash</h2>
+                <form method="post">
+                {% csrf_token %}
+                    <input type="text" name="search" placeholder="Kurs nomini yozing">
+                    <button type="submit"><i class="icofont-search"></i></button>
+                </form>
+                <p>Barcha fanlardan kurslar mavjud</p>
+                <ul class="lab-ul">
+                    <li><i class="icofont-users-alt-4"></i> 1000+ Studentlar</li>
+                    <li><i class="icofont-notification"></i> Har haftalik testlar</li>
+                    <li><i class="icofont-globe"></i> Online ma'lumotlar</li>
+                </ul>
             </div>
         </div>
-        <div class="all-shapes"></div>
-        <div class="cbs-content-list d-none">
-            <ul class="lab-ul">
-                <li class="ccl-shape shape-1"><a href="#">16M Students Happy</a></li>
-                <li class="ccl-shape shape-2"><a href="#">130K+ Total Courses</a></li>
-                <li class="ccl-shape shape-3"><a href="#">89% Successful Students</a></li>
-                <li class="ccl-shape shape-4"><a href="#">23M+ Learners</a></li>
-                <li class="ccl-shape shape-5"><a href="#">36+ Languages</a></li>
-            </ul>
-        </div>
-    </section>
+    </div>
+    <!-- Banner Section Ending Here -->

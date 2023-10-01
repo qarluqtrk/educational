@@ -1,0 +1,32 @@
+{% extends 'app/main/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Header section start here -->
+    <div class="pageheader-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="pageheader-content text-center">
+                        <h2>4 Results found for: Business</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Search Result</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header section ending here -->
+    <div class="blog-section padding-tb section-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                {% include 'app/main/results/result-search.html' %}
+                {% include 'app/main/results/result-result.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'app/main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Page Header section start here -->
+    <div class="pageheader-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="pageheader-content text-center">
+                        <h2>{{ instructor.name }}</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ instructor.name }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header section ending here -->
+
+
+    <!-- instructor Single Section Starts Here -->
+    <section class="instructor-single-section padding-tb section-bg">
+        <div class="container">
+            <div class="instructor-wrapper">
+                <div class="instructor-single-top">
+                    <div class="instructor-single-item d-flex flex-wrap justify-content-between">
+                        <div class="instructor-single-thumb">
+                            <img src="{{ instructor.image.url }}" alt="instructor">
+                        </div>
+                        <div class="instructor-single-content">
+                            <h4 class="title">{{ instructor.name }}</h4>
+                            <p class="ins-dege">{{ instructor.degree }}</p>
+                            <p class="ins-desc">{{ instructor.bio }}</p>
+                            <ul class="lab-ul">
+                                <li class="d-flex flex-wrap justify-content-start">
+                                    <span class="list-name">Adress</span>
+                                    <span class="list-attr">{{ instructor.address }}</span>
+                                </li>
+                                <li class="d-flex flex-wrap justify-content-start">
+                                    <span class="list-name">Email</span>
+                                    <span class="list-attr">{{ instructor.email }}</span>
+                                </li>
+                                <li class="d-flex flex-wrap justify-content-start">
+                                    <span class="list-name">Phone</span>
+                                    <span class="list-attr">{{ instructor.phone }}</span>
+                                </li>
+                                <li class="d-flex flex-wrap justify-content-start">
+                                    <span class="list-name">Follow Us</span>
+                                    <ul class="lab-ul list-attr d-flex flex-wrap justify-content-start">
+                                        <li>
+                                            <a class="twitter" href="#"><i class="icofont-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="instagram" href="#"><i class="icofont-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="basketball" href="#"><i class="icofont-basketball"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="vimeo" href="#"><i class="icofont-vimeo"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="beahnce" href="#"><i class="icofont-behance"></i></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructor-single-bottom d-flex flex-wrap mt-4">
+                    <div class="col-xl-6 pb-5 pb-xl-0 d-flex flex-wrap justify-content-lg-start justify-content-between">
+
+                        {% if languages != 'None' %}
+                            <h4 class="subtitle">Personal Language Skill</h4>
+                            {% for language in languages %}
+                                <div class="text-center skill-item">
+                                    <div class="skill-thumb">
+                                        <div class="circles text-center">
+                                            <div class="circle first" data-percent="{{ language.percentage }}">
+                                                <strong>{{ language.percentage }}<i>%</i></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>{{ language.language }}</p>
+                                </div>
+                            {% endfor %}
+
+                        {% endif %}
+
+                    </div>
+                    <div class="col-xl-6 d-flex flex-wrap justify-content-lg-start justify-content-between">
+                        {% if awards != 'None' %}
+                            <h4 class="subtitle">Recognitions Award</h4>
+                            {% for award in awards %}
+                                <div class="skill-item text-center">
+                                    <div class="skill-thumb">
+                                        <img style="width: 100px; height: 100px; object-fit: scale-down"
+                                             src="{{ award.icon.url }}" alt="instructor">
+                                    </div>
+                                    <p>{{ award.title }}</p>
+                                </div>
+                            {% endfor %}
+
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- instructor Single Section Ends Here -->
+{% endblock %}

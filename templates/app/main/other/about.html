@@ -5,37 +5,37 @@
                 <div class="col">
                     <div class="about-right padding-tb">
                         <div class="section-header">
-                            <span class="subtitle">About Our Edukon</span>
-                            <h2 class="title">Good Qualification Services And Better Skills</h2>
-                            <p>Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than extensible archtectur communicate leveraged services and cross-platform.</p>
+                            <span class="subtitle">Asliddin O'quv Markazi haqida</span>
+                            <h2 class="title">{{ about.title }}</h2>
+                            <p>{{ about.description }}</p>
                         </div>
                         <div class="section-wrapper">
                             <ul class="lab-ul">
                                 <li>
                                     <div class="sr-left">
-                                        <img src="{% static 'assets/images/about/icon/01.jpg' %}" alt="about icon">
+                                        <img src="{{ about.featureicon1.url }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
-                                        <h5>Skilled Instructors</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
+                                        <h5>{{ about.featuretext1 }}</h5>
+                                        <p>{{ about.featuredesc1 }}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sr-left">
-                                        <img src="{% static 'assets/images/about/icon/02.jpg' %}" alt="about icon">
+                                        <img src="{{ about.featureicon2.url }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
-                                        <h5>Get Certificate</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
+                                        <h5>{{ about.featuretext2 }}</h5>
+                                        <p>{{ about.featuredesc2 }}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sr-left">
-                                        <img src="{% static 'assets/images/about/icon/03.jpg' %}" alt="about icon">
+                                        <img src="{{ about.featureicon3.url }}" alt="about icon">
                                     </div>
                                     <div class="sr-right">
-                                        <h5>Online Classes</h5>
-                                        <p>Distinctively provide acces mutfuncto users whereas communicate leveraged services</p>
+                                        <h5>{{ about.featuretext3 }}</h5>
+                                        <p>{{ about.featuredesc3 }}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -45,7 +45,7 @@
                 <div class="col">
                     <div class="about-left">
                         <div class="about-thumb">
-                            <img src="{% static 'assets/images/about/01.png' %}" alt="about">
+                            <img src="{{ about.image.url }}" alt="about">
                         </div>
                     </div>
                 </div>
